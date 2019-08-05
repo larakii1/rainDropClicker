@@ -1,59 +1,20 @@
-#pokeball {
+#bouton {
     width: 300px;
     height: 300px;
-    background-image: url(images/balls/pokeBall.png);
-    background-size: cover;
+    background-color: red;
     cursor: pointer;
-    z-index:10000;
+    border: 2px solid black;
     border-radius: 50%;
-    border: 5px solid green;
 }
 
-#pokeMart {
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-.product {
+#multi {
+    background-color: cyan;
+    border: 2px solid black;
     cursor: pointer;
-    border: 10px solid red;
-    height: 100px;
 }
 
-.icon {
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-}
-
-#productIcon1 {
-    background-image: url(images/produits/scout.png);
-}
-
-#productIcon2 {
-    background-image: url(images/produits/magikarp.png);
-}
-
-#productIcon3 {
-    background-image: url(images/produits/geodude.png);
-}
-
-#productIcon4 {
-    background-image: url(images/produits/voltorb.png);
-}
-
-#productIcon5 {
-    background-image: url(images/produits/clefairy.png);
-}
-
-#productIcon6 {
-    background-image: url(images/produits/ditto.png);
-}
-
-#productIcon7 {
-    background-image: url(images/produits/mew.png);
+#autoClicker {
+    background-color: greenyellow;
+    border: 2px solid black;
+    cursor: pointer;
 }
