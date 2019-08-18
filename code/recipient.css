@@ -25,6 +25,6 @@ body {
 #nbrGouttes {
     position: absolute;
     z-index: 1000;
-    top: 39%;
-    left: 938px;
+    margin-top: -1%;
+    margin-left: 4%;
 }
