@@ -33,9 +33,9 @@ function upRecipient() {
         prixRecipient *= 1.1;
         lvlEauInv = (100 - ((nbrGouttes * 100) / lvlEauMax));
         document.getElementById("nbrGouttes").innerHTML = nbrGouttes + " / " + Math.round(lvlEauMax);
+        document.getElementById("argent").innerHTML = "Argent = " + Math.round(argent) + "€";
         posEau.style.height = lvlEauInv + "%";
         document.getElementById("upMenuRecipient").innerHTML = "Récipient - " + Math.round(prixRecipient) + "€";
-        console.log(Math.round(argent));
     }
 }
 
@@ -46,6 +46,7 @@ function recupEau() {
         argent += monnaie;
         lvlEauInv = (100 - ((nbrGouttes * 100) / lvlEauMax));
         document.getElementById('nbrGouttes').innerHTML = nbrGouttes + " / " + lvlEauMax;
+        document.getElementById("argent").innerHTML = "Argent = " + argent + "€";
         posEau.style.height = lvlEauInv + "%";
     }
 }
