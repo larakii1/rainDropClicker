@@ -6,13 +6,13 @@ document.getElementById('affichage').innerHTML = score + " gouttes";
 
 function clickBouton() {
     elem = document.getElementById("gout");
-    pos = 100;
+    pos = 200;
     var id = setInterval(frame, 10);
     function frame() {
-        if (pos >= 570) {
+        if (pos >= 550) {
             clearInterval("gout");
         } else {
-            pos += 20;
+            pos += 10;
             elem.style.top = pos + 'px';
         }
     }
