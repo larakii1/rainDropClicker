@@ -3,9 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="language" content="fr">
+        <link rel="stylesheet" type="text/css" href="nuage.css">
         <link rel="stylesheet" type="text/css" href="recipient.css">
         <link rel="stylesheet" type="text/css" href="ameliorations.css">
-        <title>RainDrop Clicker</title>        
+        <link rel="stylesheet" type="text/css" href="rain.css">
+        <title>RainDropClicker</title>        
     </head>
     <body>
         
@@ -19,11 +21,45 @@
         </ul>
         <div id="argent">Argent = 1000€</div>
         
-        <div id="recipient" onclick="niveauEau()">
+<!------------------------------------------------------------------------------------------------------------------------------>
+        <div id="nuage" onclick="clickBouton()">   
+            <img src="../images/nuage.png">
+        </div>
+        
+        <div id="gout"><img src="../images/Goutte_d'eau.png" width="100px" height="100px"></div>
+        
+<!------------------------------------------------------------------------------------------------------------------------------>
+        <div id="recipient">
             <div id="nbrGouttes">0 / 10</div>
             <div id="niveauEau"></div>
+        </div>
+
+<!------------------------------------------------------------------------------------------------------------------------------>
+        <div id="sisi"></div>
+        <div class="shaman"><img src="../images/shaman.gif"></div>
+        <div id="life"> 
+            <div></div>
+            <div class= "test">                     
+                <img src="../images/haha.gif"> 
+            </div>
+        </div>
+        
+        <div id="life2">
+            <div class ="haha" style="--width:100"></div>
+            <div class="test2">             
+                <img src="../images/haha2.gif">
+            </div>
+        </div>
+        
+        <div id="life3">
+            <div></div>
+            <div class="test3">             
+                <img src="../images/haha3.gif">
+            </div>
         </div>
         
     </body>
     <script src="recipient.js"></script>
+    <script src="nuage.js"></script>
+    <script src="rain.js"></script>
 </html>
