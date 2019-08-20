@@ -4,7 +4,7 @@
     list-style: none;
 }
 #menu {
-    text-align: center;
+    text-align: right;
 }
 #menu li {
     display: inline-block;
