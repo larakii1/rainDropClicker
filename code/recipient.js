@@ -1,4 +1,3 @@
-var argent = 0;
 var prixRecipient = 100;
 var finit = false;
 

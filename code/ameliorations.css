@@ -3,27 +3,34 @@
     margin: 0;
     list-style: none;
 }
+
 #menu {
-    text-align: right;
+    position: absolute;
+    display: flex;
+    left: 10px;
+    top: 100px;
 }
+
 #menu li {
-    display: inline-block;
     border: 1px solid red;
 }
+
 #menu ul li {
-    display: inherit;
     border: 1px solid black;
 }
+
 #menu a {
     text-decoration: none;
     color: black;
 }
+
 #menu ul {
     position: absolute;
     display: none;
     text-align: left;
     z-index: 1000;
 }
+
 #menu li:hover ul {
     display: block;
 }
