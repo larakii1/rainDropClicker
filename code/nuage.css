@@ -18,7 +18,7 @@ body {
     position:absolute;
     cursor: pointer;
     left: 40%;
-    top: 0%;
+    top: 10%;
     z-index: 10000;
 }
 
@@ -50,7 +50,8 @@ body {
 }
 
 #gout{
-    left:48%;   
+    left:48%;
+    top: 16%;
     width: 50px;
     height: 50px;
     position: absolute;
