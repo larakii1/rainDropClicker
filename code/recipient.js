@@ -33,7 +33,7 @@ function upRecipient() {
         document.getElementById("nbrGouttes").innerHTML = nbrGouttes + " / " + Math.round(lvlEauMax);
         document.getElementById("argent").innerHTML = "Argent = " + Math.round(argent) + "€";
         posEau.style.height = lvlEauInv + "%";
-        document.getElementById("upMenuRecipient").innerHTML = "Récipient - " + Math.round(prixRecipient) + "€";
+        document.getElementById("upMenuRecipient").innerHTML = "Récipient | " + Math.round(prixRecipient) + "€";
     }
 }
 

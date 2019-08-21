@@ -1,10 +1,9 @@
 /*vie et perso 1*/
 #life {
     position: absolute;
-    left: 30%;
     top: 82%;
     transform: translate(-50%, -50%);
-    height: 5px;
+    height: 10px;
     width: 60px;
     background-color: black;
 }
@@ -75,6 +74,10 @@
     width: 200px;
     height: 300px;
     margin-top: 100px;
+     transition-duration: 2s;
+}
+.shaman img:active{transform: rotatey(360deg);
+  
 }
 
 /**********************/

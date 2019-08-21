@@ -11,9 +11,6 @@
     top: 100px;
 }
 
-#menu li {
-    border: 1px solid red;
-}
 
 #menu ul li {
     border: 1px solid black;
@@ -34,3 +31,10 @@
 #menu li:hover ul {
     display: block;
 }
+
+#menu li {
+    border: 3px solid black;
+     transition: transform 0.3s ease;
+}
+#menu li:hover {
+    transform: scale(1.05);}
