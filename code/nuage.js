@@ -49,8 +49,8 @@ function clickBouton() {
 
 function autoClicker() {
     document.getElementById("argent").innerHTML = "Argent = " + (argent-prixgoutteauto) +"€";
-    document.getElementById("goutteauto").innerHTML = " goutteauto- " + Math.round(prixgoutteauto) + "€";
-    prixgoutteauto++
+    prixgoutteauto += 10;
+    document.getElementById("goutteauto").innerHTML = "Chaman - " + Math.round(prixgoutteauto) + "€";
     setInterval(clickBouton,1000);
 }
 
