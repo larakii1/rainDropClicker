@@ -20,19 +20,10 @@ setInterval(updateleft, 60);
 
 
 
-var dive = document.querySelector('#life3');
-var left = 0;
-var updatelefte = function () {
-    left = left + 10;
-    if (left > position) {
-        left = position;
-    }
-    dive.style.left = left+"px";
-}
-setInterval(updatelefte, 60);
 
 /* Perso 2 qui court */
 var dive = document.querySelector('#life2');
+var perso2interval;
 var left = 0;
 var updatelefte = function () {
         left = left + 10;
@@ -68,19 +59,22 @@ setInterval(updatelefte, 60); /* 1er déplacement du perso */
 
 /* Défiliement de la vie du mec qui court */
 var life2 = document.getElementsByClassName('haha')[0];
-setInterval(()=> {
+var vieInterval = setInterval(()=> {
     const computedStyle = getComputedStyle(life2);
     const width = parseFloat(computedStyle.getPropertyValue('--width')) 
     life2.style.setProperty('--width',width - .1);
+    if (width<=0){
+   clearInterval(vieInterval);
+        perso2interval = setInterval(updatelefte,60);
+    document.getElementById("life2").style.display="none";
+
+}
+
 }, 30)
 
 
-var life = document.getElementsByClassName('haha')[0]
-setInterval(()=> {
-    const computedStyle = getComputedStyle(life2)
-    const width = parseFloat(computedStyle.getPropertyValue('--width')) 
-    life2.style.setProperty('--width',width - .1)
-}, 20)
+
+
 
 
 
