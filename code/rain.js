@@ -1,3 +1,10 @@
+var demande = 5;
+var monnaie = 100;
+var finit = false;
+var position = 930;
+var fonctionPrete = 0;
+
+
 /*
 var div = document.querySelector('#life');
 var left = 0;
@@ -12,24 +19,17 @@ setInterval(updateleft, 60);
 */
 
 
-/*
+
 var dive = document.querySelector('#life3');
 var left = 0;
 var updatelefte = function () {
     left = left + 10;
-    if (left>500) {
-        left = 500;
+    if (left > position) {
+        left = position;
     }
     dive.style.left = left+"px";
 }
 setInterval(updatelefte, 60);
-*/
-
-var demande = 5;
-var monnaie = 100;
-var finit = false;
-var position = 930;
-var fonctionPrete = 0;
 
 /* Perso 2 qui court */
 var dive = document.querySelector('#life2');
@@ -58,7 +58,7 @@ var updatelefte = function () {
         }
         dive.style.left = left + "px";
         if (fonctionPrete < -1) { /* Activé dès que le personnage sort de l'écran */
-            alert("tu vois plus le monsieur");
+            document.getElementsByClassName('haha').classList.toggle("disabled");
         }
     }
 };
@@ -83,11 +83,10 @@ setInterval(()=> {
 }, 20)
 
 
-/*
+
 var lifeIndicator = document.querySelector('#life div');
 var pourcent=0;
 addEventListener('timeupdate',function(){
 console.log(this.duration);
 console.log(this.currentTime);
 });
-*/

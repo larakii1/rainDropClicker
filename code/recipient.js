@@ -45,7 +45,7 @@ function recupEau(demande, monnaie) {
         finit = true;
         lvlEauInv = (100 - ((nbrGouttes * 100) / lvlEauMax));
         document.getElementById('nbrGouttes').innerHTML = nbrGouttes + " / " + lvlEauMax;
-        document.getElementById("argent").innerHTML = "Argent = " + argent + "€";
+        document.getElementById("argent").innerHTML = "Argent = " + Math.round(argent) + "€";
         posEau.style.height = lvlEauInv + "%";
         return finit;
     }
