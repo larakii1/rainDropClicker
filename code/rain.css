@@ -36,6 +36,7 @@
 }
 
 .test img {
+    top: 20px;
     position: relative;
     right: 80px;       
 }

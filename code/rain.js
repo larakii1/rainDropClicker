@@ -22,22 +22,22 @@ setInterval(updateleft, 60);
 
 
 /* Perso 2 qui court */
-var dive = document.querySelector('#life2');
 var perso2interval;
+var div = document.querySelector('#life2');
 var left = 0;
-var updatelefte = function () {
+var updateleft = function () {
         left = left + 10;
         if (left > position) {
             left = position;
             fonctionPrete++; /* fonctionPrete + 1 quand l'animation est terminée */
         }
-        dive.style.left = left + "px";
+        div.style.left = left + "px";
         if (fonctionPrete >= 1) { /* Activé dès que l'animation se termine pour la première fois */
             if (finit === false) {
                 recupEau(demande, monnaie); /* Récupération de l'eau et payement */
             } else if (finit === true) { /* Activé dès que la récupération d'eau et le payement ont été faits */
                 position = 1950;
-                setInterval(updatelefte, 60);
+                setInterval(updateleft, 60);
                 fonctionPrete = -1;
             }
         }
@@ -45,17 +45,18 @@ var updatelefte = function () {
         left = left + 10;
         if (left > position) {
             left = position;
+           
             fonctionPrete--; /* fonctionPrete - 1 quand l'animation est terminée */
         }
-        dive.style.left = left + "px";
+        div.style.left = left + "px";
+     
         if (fonctionPrete < -1) { /* Activé dès que le personnage sort de l'écran */
             document.getElementsByClassName('haha').classList.toggle("disabled");
         }
     }
-};
-setInterval(updatelefte, 60); /* 1er déplacement du perso */
+}; 
 
-
+setInterval(updateleft, 60); /* 1er déplacement du perso */
 
 /* Défiliement de la vie du mec qui court */
 var life2 = document.getElementsByClassName('haha')[0];
@@ -65,17 +66,58 @@ var vieInterval = setInterval(()=> {
     life2.style.setProperty('--width',width - .1);
     if (width<=0){
    clearInterval(vieInterval);
-        perso2interval = setInterval(updatelefte,60);
+   left=100;
+   perso2interval = setInterval(updatelefte,60);  
     document.getElementById("life2").style.display="none";
+   /* perso2interval = setInterval(updatelefte,60);*/
+}
+
+}, 30);
+
+
+
+
+var dive = document.querySelector('#life3');
+
+var updatelefte = function (){
+left=left+10;
+if (left>1000) {
+clearInterval(perso2interval);
+left=1000;
+    } 
+dive.style.left= left+"px";
+}; //perso2 momie*/
+
+
+
+
+var life3 = document.getElementsByClassName('zaza') [0] ;// vie momie
+var vieIntervale;
+var vieIntervale = setInterval(()=> {
+
+
+const computedStyle = getComputedStyle(life3);
+const width = parseFloat(computedStyle.getPropertyValue('--width')) ;
+life3.style.setProperty('--width',width - .1)
+if (width<=0){
+clearInterval(vieIntervale);
+left=100;
+perso3interval = setInterval(updatelefta,60);
+document.getElementById("life3").style.display="none";
 
 }
 
-}, 30)
+},30);
 
-
-
-
-
+var diva = document.querySelector('#life');
+var updatelefta = function (){
+left=left+10;
+if (left>1000) {
+clearInterval(perso2interval);
+left=1000;
+    } 
+diva.style.left= left+"px";
+} 
 
 
 var lifeIndicator = document.querySelector('#life div');
